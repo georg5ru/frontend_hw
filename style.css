@@ -1,52 +1,61 @@
-header nav ul li a {
+/* 1. Верхние ссылки в шапке сайта */
+.header-link {
     font-size: 16px;
     line-height: 20px;
 }
 
-h1 {
+/* 2. Заголовок h1 */
+.main-title {
     font-weight: 600;
     font-size: 64px;
     line-height: 70px;
 }
 
-section:nth-of-type(1) p {
+/* 3. Подзаголовок главного блока */
+.main-subtitle {
     font-size: 24px;
     line-height: 32px;
 }
 
-section:nth-of-type(1) a {
+/* 4. Кнопка-ссылка в главном блоке */
+.main-btn {
     font-size: 16px;
     line-height: 24px;
 }
 
-h2 {
+/* 5. Заголовок секции h2 */
+.section-title {
     font-weight: 600;
     font-size: 48px;
     line-height: 59px;
     color: #000000;
 }
 
-h3 {
+/* 6. Название товара h3 */
+.product-title {
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
     color: #000000;
 }
 
-section:nth-of-type(2) p:of-type(1) {
+/* 7. Описание товара */
+.product-desc {
     font-size: 14px;
     line-height: 17px;
     color: #888888;
 }
 
-section:nth-of-type(2) p:of-type(2) {
+/* 8. Текущая цена */
+.product-price-current {
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
     color: #050505;
 }
 
-section:nth-of-type(2) p:of-type(3) {
+/* 9. Старая цена */
+.product-price-old {
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
@@ -54,14 +63,16 @@ section:nth-of-type(2) p:of-type(3) {
     color: #888888;
 }
 
-h4 {
+/* 10. Заголовки в подвале h4 */
+.footer-title {
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
     color: #000000;
 }
 
-footer a {
+/* 11. Ссылки в подвале сайта */
+.footer-link {
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
@@ -69,13 +80,15 @@ footer a {
     text-decoration: none;
 }
 
-footer form p {
+/* 12. Текст над формой подписки */
+.subscribe-text {
     font-size: 14px;
     line-height: 16px;
     color: #000000;
 }
 
-input[type="email"] {
+/* 13. Поле ввода email */
+.subscribe-input {
     background: #FFFFFF;
     border: 1px solid #C4C4C4;
     box-sizing: border-box;
@@ -86,7 +99,8 @@ input[type="email"] {
     color: #C4C4C4;
 }
 
-button[type="submit"] {
+/* 14. Кнопка подписки */
+.subscribe-btn {
     background: rgba(222, 215, 215, 0.41);
     border: 1px solid #FFFFFF;
     box-sizing: border-box;
