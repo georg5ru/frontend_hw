@@ -1,3 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-link,
+.footer-link {
+    color: #888888;
+    text-decoration: none;
+}
+
+.header-link:hover,
+.footer-link:hover,
+.main-btn:hover {
+    text-decoration: underline;
+}
+
+header {
+    height: 76px;
+}
+
 /* 1. Верхние ссылки в шапке сайта */
 .header-link {
     font-size: 16px;
@@ -9,18 +31,23 @@
     font-weight: 600;
     font-size: 64px;
     line-height: 70px;
+    margin-top: 64px;
+    margin-bottom: 16px;
 }
 
 /* 3. Подзаголовок главного блока */
 .main-subtitle {
     font-size: 24px;
     line-height: 32px;
+    margin-bottom: 16px;
 }
 
 /* 4. Кнопка-ссылка в главном блоке */
 .main-btn {
     font-size: 16px;
     line-height: 24px;
+    color: #000000;
+    text-decoration: none;
 }
 
 /* 5. Заголовок секции h2 */
@@ -29,6 +56,7 @@
     font-size: 48px;
     line-height: 59px;
     color: #000000;
+    margin-bottom: 32px;
 }
 
 /* 6. Название товара h3 */
@@ -37,6 +65,7 @@
     font-size: 24px;
     line-height: 29px;
     color: #000000;
+    margin-bottom: 8px;
 }
 
 /* 7. Описание товара */
@@ -44,6 +73,7 @@
     font-size: 14px;
     line-height: 17px;
     color: #888888;
+    margin-bottom: 12px;
 }
 
 /* 8. Текущая цена */
@@ -69,6 +99,7 @@
     font-size: 24px;
     line-height: 29px;
     color: #000000;
+    margin-bottom: 12px;
 }
 
 /* 11. Ссылки в подвале сайта */
@@ -76,8 +107,6 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
-    color: #888888;
-    text-decoration: none;
 }
 
 /* 12. Текст над формой подписки */
@@ -85,6 +114,7 @@
     font-size: 14px;
     line-height: 16px;
     color: #000000;
+    margin-bottom: 16px;
 }
 
 /* 13. Поле ввода email */
