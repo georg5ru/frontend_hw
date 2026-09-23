@@ -1,59 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Interior</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src='logo.svg' alt="Тут должно быть фото">
-        <input type="text" name="username" placeholder="Введите ваше имя">
-        <nav>
-            <ul>
-                <li><a class="header-link" href="catalog.html">Перейти в каталог</a></li>
-                <li><a class="header-link" href="#">Корзина</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="page-shell">
+        <header class="site-header">
+            <a class="logo-link" href="index.html" aria-label="На главную">
+                <img class="logo" src="img/logo.svg" alt="Логотип">
+            </a>
 
-    <section>
-        <h1 class="main-title">Все, чего заслуживает ваш дом</h1>
-        <p class="main-subtitle">Наша мебель — ваше отражение</p>
-        <a class="main-btn" href="catalog.html">Перейти в каталог</a>
-    </section>
+            <div class="header-search">
+                <input type="text" name="username" placeholder="Введите ваше имя">
+            </div>
 
-    <section>
-        <h2 class="section-title">Специальные предложения</h2>
-        <img src="product1.jpg" alt="продукт1">
-        <h3 class="product-title">Кресло VILORA</h3>
-        <p class="product-desc">Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья и приятная на ощупь ткань</p>
-        <p class="product-price-current">21 000</p>
-        <p class="product-price-old">28 000</p>
-    </section>
+            <nav class="main-nav" aria-label="Главная навигация">
+                <ul>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="#">Корзина</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <footer>
-        <h4 class="footer-title">Меню</h4>
-        <nav>
-            <ul>
-                <li><a class="footer-link" href='index.html'>Главная</a></li>
-                <li><a class="footer-link" href="catalog.html">Каталог</a></li>
-                <li><a class="footer-link" href="#">Корзина</a></li>
-            </ul>
-            <h4 class="footer-title">Контакты</h4>
-            <a class="footer-link" href="+7 908 800 80 80">+7 908 800 80 80</a>
-            <a class="footer-link" href="help@interier.com">help@interier.com</a>
-            <br>
-            <img src="vk.svg" alt="вк">
-            <img src="telegram.svg" alt="телеграмм">
-            <img src="dzen.svg" alt="дзен">
-        </nav>
-        <form>
-            <p class="subscribe-text">Получайте наши новости и обновления</p>
-            <input class="subscribe-input" type="email">
-            <button class="subscribe-btn" type="submit">Поздняков.Подписаться</button>
-        </form>
-    </footer>
+        <main class="home-main">
+            <section class="hero">
+                <div class="hero-content">
+                    <p class="eyebrow">Интерьер.</p>
+                    <h1>Все, чего заслуживает ваш дом</h1>
+                    <p class="subtitle">Наша мебель — ваше отражение.</p>
+                    <a class="primary-btn" href="catalog.html">Перейти в каталог</a>
+                </div>
+            </section>
+
+            <section class="offers">
+                <h2>Специальные предложения</h2>
+
+                <div class="product-grid">
+                    <article class="offer-card">
+                        <img src="img/product1.jpg" alt="Кресло VILORA">
+                        <div class="offer-info">
+                            <h3>Кресло VILORA</h3>
+                            <p>Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья и приятная на ощупь ткань.</p>
+                            <div class="price-row">
+                                <span class="price-old">28 000 ₽</span>
+                                <span class="price-current">21 000 ₽</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="offer-card">
+                        <img src="img/product2.jpg" alt="Комод VENT">
+                        <div class="offer-info">
+                            <h3>Комод VENT</h3>
+                            <p>Деревянный, практичный и функциональный для любой комнаты.</p>
+                            <div class="price-row">
+                                <span class="price-old">24 000 ₽</span>
+                                <span class="price-current">18 000 ₽</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="offer-card">
+                        <img src="img/product3.jpg" alt="Стол TATBAN">
+                        <div class="offer-info">
+                            <h3>Стол TATBAN</h3>
+                            <p>Элегантная форма и качественная отделка в современном стиле.</p>
+                            <div class="price-row">
+                                <span class="price-old">32 000 ₽</span>
+                                <span class="price-current">26 000 ₽</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-column">
+                <h4>Меню</h4>
+                <nav aria-label="Меню в футере">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="#">Корзина</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-column">
+                <h4>Контакты</h4>
+                <a href="tel:+79088008080">+7 908 800 80 80</a>
+                <a href="mailto:help@interier.com">help@interier.com</a>
+            </div>
+
+            <div class="footer-column social">
+                <h4>Соцсети</h4>
+                <div class="social-icons">
+                    <img src="img/vk.svg" alt="VK">
+                    <img src="img/telegram.svg" alt="Telegram">
+                    <img src="img/dzen.svg" alt="Dzen">
+                </div>
+            </div>
+
+            <form class="subscribe-form">
+                <p>Получайте наши новости и обновления</p>
+                <div class="subscribe-row">
+                    <input type="email" placeholder="Ваш email">
+                    <button type="submit">Подписаться</button>
+                </div>
+            </form>
+        </footer>
+    </div>
 </body>
 </html>

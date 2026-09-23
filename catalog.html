@@ -1,49 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Каталог</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src='logo.svg' alt="Тут должно быть фото">
-        <input type="text" name="username" placeholder="Введите ваше имя">
-    <nav>
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="#">Корзина</a></li>
-        </ul>
-    </nav>
-    </header>
-    <section>
-        <h1>Каталог</h1>
-        <img src="product1.jpg" alt="продукт1">
-        <h3>Кресло VILORA</h3>
-        <p>Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья и приятная на ощупь ткань</p>
-        <p>21 000</p>
-        <p>28 000</p>
-    </section>
-    <footer>
-        <h4>Меню</h4>
-        <nav>
+    <header class="site-header">
+        <div class="logo-wrap">
+            <img class="logo" src="img/logo.svg" alt="Логотип">
+        </div>
+
+        <div class="header-search">
+            <input type="text" name="username" placeholder="Введите ваше имя">
+        </div>
+
+        <nav class="main-nav" aria-label="Главная навигация">
             <ul>
-                <li><a href='index.html'>Главная</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="index.html">Главная</a></li>
                 <li><a href="#">Корзина</a></li>
             </ul>
-            <h4>Контакты</h4>
-            <a href="+7 908 800 80 80">+7 908 800 80 80</a>
-            <a href="help@interier.com">help@interier.com</a>
-            <img src="vk.svg" alt="вк">
-            <img src="telegram.svg" alt="телеграмм">
-            <img src="dzen.svg" alt="дзен">
         </nav>
-        <form>
+    </header>
+
+    <main class="catalog-page">
+        <section class="product-card">
+            <h1>Каталог</h1>
+
+            <div class="product-image">
+                <img src="img/product1.jpg" alt="Кресло VILORA">
+            </div>
+
+            <h3>Кресло VILORA</h3>
+
+            <p class="description">
+                Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья
+                и приятная на ощупь ткань.
+            </p>
+
+            <div class="price-block">
+                <span class="price old">28 000 ₽</span>
+                <span class="price current">21 000 ₽</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-column">
+            <h4>Меню</h4>
+            <nav aria-label="Меню в футере">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="#">Корзина</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-column">
+            <h4>Контакты</h4>
+            <a href="tel:+79088008080">+7 908 800 80 80</a><br>
+            <a href="mailto:help@interier.com">help@interier.com</a>
+        </div>
+
+        <div class="footer-column social">
+            <img src="img/vk.svg" alt="VK">
+            <img src="img/telegram.svg" alt="Telegram">
+            <img src="img/dzen.svg" alt="Dzen">
+        </div>
+
+        <form class="subscribe-form">
             <p>Получайте наши новости и обновления</p>
-            <input type="email">
-            <button type="submit">Поздняков.Подписаться</button>
+            <div class="subscribe-row">
+                <input type="email" placeholder="Ваш email">
+                <button type="submit">Подписаться</button>
+            </div>
         </form>
     </footer>
 </body>
