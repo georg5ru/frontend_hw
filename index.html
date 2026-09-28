@@ -3,119 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interior</title>
+    <meta name="description" content="Мебель для вашего дома: каталог, специальные предложения и идеи для интерьера.">
+    <title>Интерьер — мебель для дома</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="page-shell">
-        <header class="site-header">
-            <a class="logo-link" href="index.html" aria-label="На главную">
-                <img class="logo" src="img/logo.svg" alt="Логотип">
-            </a>
+    <div class="site-page">
+        <main>
+            <section class="hero" aria-labelledby="hero-title">
+                <header class="hero__header">
+                    <a class="hero__brand" href="index.html" aria-label="Интерьер — главная">
+                        <img src="img/Интерьер..svg" alt="Интерьер." width="193" height="33">
+                    </a>
 
-            <div class="header-search">
-                <input type="text" name="username" placeholder="Введите ваше имя">
+                    <form class="hero__search" role="search" action="#">
+                        <label class="visually-hidden" for="site-search">Поиск по сайту</label>
+                        <input id="site-search" name="q" type="search" placeholder="Поиск">
+                    </form>
+
+                    <nav class="hero__navigation" aria-label="Главная навигация">
+                        <a class="hero__navigation-link" href="catalog.html">Каталог</a>
+                        <a class="hero__navigation-link" href="#cart">Корзина</a>
+                    </nav>
+                </header>
+
+                <div class="hero__content">
+                    <h1 class="hero__title" id="hero-title">Всё, чего<br> заслуживает ваш дом</h1>
+                    <p class="hero__subtitle">Наша мебель — ваше отражение</p>
+                    <a class="hero__catalog-link" href="catalog.html">Перейти в каталог</a>
+                </div>
+            </section>
+
+            <div class="site-content">
+                <section class="categories" aria-labelledby="categories-title">
+                    <h2 class="categories__title" id="categories-title">Мебель для ...</h2>
+                    <div class="categories__grid">
+                        <a class="category-card category-card--large" href="catalog.html">
+                            <img class="category-card__image" src="img/Rectangle 23.jpg" alt="Уютная гостиная с диваном">
+                            <span class="category-card__title">Отдыха</span>
+                        </a>
+                        <a class="category-card category-card--large" href="catalog.html">
+                            <img class="category-card__image" src="img/Rectangle 24-1.jpg" alt="Мебель для рабочей зоны">
+                            <span class="category-card__title">Работы</span>
+                        </a>
+                        <a class="category-card category-card--small" href="catalog.html">
+                            <img class="category-card__image" src="img/Rectangle 24.jpg" alt="Мебель и интерьер">
+                            <span class="category-card__title">Кухни</span>
+                        </a>
+                        <a class="category-card category-card--small" href="catalog.html">
+                            <img class="category-card__image" src="img/Rectangle 22-1.jpg" alt="Мебель для детской комнаты">
+                            <span class="category-card__title">Детской</span>
+                        </a>
+                        <a class="category-card category-card--small" href="catalog.html">
+                            <img class="category-card__image" src="img/Rectangle 23-2.jpg" alt="Современный интерьер">
+                            <span class="category-card__title">Ванной</span>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="product-section product-section--offers" aria-labelledby="offers-title">
+                    <h2 class="product-section__title" id="offers-title">Специальные предложения</h2>
+                    <div class="product-grid product-grid--offers">
+                        <article class="product-card product-card--offer">
+                            <a class="product-card__image-link" href="catalog.html">
+                                <img class="product-card__image" src="img/Rectangle 22.jpg" alt="Подвесная люстра VODA">
+                            </a>
+                            <h3 class="product-card__title">Люстра VODA</h3>
+                            <p class="product-card__description">Основание из полированной нержавеющей стали, придает оригинальный парящий эффект.</p>
+                            <div class="product-card__prices">
+                                <span class="product-card__price">120 000 руб.</span>
+                                <del class="product-card__old-price">140 000 руб.</del>
+                            </div>
+                        </article>
+
+                        <article class="product-card product-card--offer">
+                            <a class="product-card__image-link" href="catalog.html">
+                                <img class="product-card__image" src="img/Rectangle 23-1.jpg" alt="Кресло в современном интерьере">
+                            </a>
+                            <h3 class="product-card__title">Диван RONALD</h3>
+                            <p class="product-card__description">Модель отличается простой линией и формой, отсутствием броского декора.</p>
+                            <div class="product-card__prices">
+                                <span class="product-card__price">156 000 руб.</span>
+                                <del class="product-card__old-price">198 000 руб.</del>
+                            </div>
+                        </article>
+
+                        <article class="product-card product-card--offer">
+                            <a class="product-card__image-link" href="catalog.html">
+                                <img class="product-card__image" src="img/Rectangle 24.jpg" alt="Комод VENT">
+                            </a>
+                            <h3 class="product-card__title">Комод VENT</h3>
+                            <p class="product-card__description">Европейский дуб — отличается особой прочностью и стабильностью.</p>
+                            <div class="product-card__prices">
+                                <span class="product-card__price">34 000 руб.</span>
+                                <del class="product-card__old-price">45 000 руб.</del>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="product-section product-section--catalog" aria-labelledby="catalog-title">
+                    <h2 class="product-section__title" id="catalog-title">Каталог товаров</h2>
+                    <div class="product-grid product-grid--catalog">
+                        <article class="product-card">
+                            <a class="product-card__image-link" href="catalog.html">
+                                <img class="product-card__image" src="img/Rectangle 22-1.jpg" alt="Кровать TATRAN">
+                            </a>
+                            <h3 class="product-card__title">Кровать TATRAN</h3>
+                            <p class="product-card__description">Основание из полированной нержавеющей стали, придает оригинальный парящий эффект.</p>
+                            <div class="product-card__prices"><span class="product-card__price">120 000 руб.</span></div>
+                        </article>
+                        <article class="product-card">
+                            <a class="product-card__image-link" href="catalog.html">
+                                <img class="product-card__image" src="img/Rectangle 23-1.jpg" alt="Кресло VILORA">
+                            </a>
+                            <h3 class="product-card__title">Кресло VILORA</h3>
+                            <p class="product-card__description">Мягкое и уютное. Упругие подушки сиденья и приятная на ощупь ткань.</p>
+                            <div class="product-card__prices"><span class="product-card__price">21 000 руб.</span></div>
+                        </article>
+                        <article class="product-card">
+                            <a class="product-card__image-link" href="catalog.html">
+                                <img class="product-card__image" src="img/Rectangle 24-1.jpg" alt="Стол MENU">
+                            </a>
+                            <h3 class="product-card__title">Стол MENU</h3>
+                            <p class="product-card__description">Для того чтобы трапезничать было приятно, необходим правильный обеденный стол.</p>
+                            <div class="product-card__prices"><span class="product-card__price">34 000 руб.</span></div>
+                        </article>
+                        <article class="product-card">
+                            <a class="product-card__image-link" href="catalog.html">
+                                <img class="product-card__image" src="img/Rectangle 22-2.jpg" alt="Кресло ASKESTA">
+                            </a>
+                            <h3 class="product-card__title">Кресло ASKESTA</h3>
+                            <p class="product-card__description">Высокоэластичный пенополиуретан в «начинке» кресла надежен и долговечен.</p>
+                            <div class="product-card__prices"><span class="product-card__price">68 000 руб.</span></div>
+                        </article>
+                        <article class="product-card">
+                            <a class="product-card__image-link" href="catalog.html">
+                                <img class="product-card__image" src="img/Rectangle 23-2.jpg" alt="Стол NORMAN">
+                            </a>
+                            <h3 class="product-card__title">Стол NORMAN</h3>
+                            <p class="product-card__description">Прекрасно переносит солнечные лучи, перепады влажности и любые осадки.</p>
+                            <div class="product-card__prices"><span class="product-card__price">40 000 руб.</span></div>
+                        </article>
+                        <article class="product-card">
+                            <a class="product-card__image-link" href="catalog.html">
+                                <img class="product-card__image" src="img/Rectangle 24-2.jpg" alt="Диван NASTAN">
+                            </a>
+                            <h3 class="product-card__title">Диван NASTAN</h3>
+                            <p class="product-card__description">Модель отличается простой линией и формой, отсутствием броского декора.</p>
+                            <div class="product-card__prices"><span class="product-card__price">80 000 руб.</span></div>
+                        </article>
+                    </div>
+                    <a class="product-section__catalog-link" href="catalog.html">Перейти в каталог</a>
+                </section>
             </div>
-
-            <nav class="main-nav" aria-label="Главная навигация">
-                <ul>
-                    <li><a href="catalog.html">Каталог</a></li>
-                    <li><a href="#">Корзина</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main class="home-main">
-            <section class="hero">
-                <div class="hero-content">
-                    <p class="eyebrow">Интерьер.</p>
-                    <h1>Все, чего заслуживает ваш дом</h1>
-                    <p class="subtitle">Наша мебель — ваше отражение.</p>
-                    <a class="primary-btn" href="catalog.html">Перейти в каталог</a>
-                </div>
-            </section>
-
-            <section class="offers">
-                <h2>Специальные предложения</h2>
-
-                <div class="product-grid">
-                    <article class="offer-card">
-                        <img src="img/product1.jpg" alt="Кресло VILORA">
-                        <div class="offer-info">
-                            <h3>Кресло VILORA</h3>
-                            <p>Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья и приятная на ощупь ткань.</p>
-                            <div class="price-row">
-                                <span class="price-old">28 000 ₽</span>
-                                <span class="price-current">21 000 ₽</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="offer-card">
-                        <img src="img/product2.jpg" alt="Комод VENT">
-                        <div class="offer-info">
-                            <h3>Комод VENT</h3>
-                            <p>Деревянный, практичный и функциональный для любой комнаты.</p>
-                            <div class="price-row">
-                                <span class="price-old">24 000 ₽</span>
-                                <span class="price-current">18 000 ₽</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="offer-card">
-                        <img src="img/product3.jpg" alt="Стол TATBAN">
-                        <div class="offer-info">
-                            <h3>Стол TATBAN</h3>
-                            <p>Элегантная форма и качественная отделка в современном стиле.</p>
-                            <div class="price-row">
-                                <span class="price-old">32 000 ₽</span>
-                                <span class="price-current">26 000 ₽</span>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
         </main>
 
         <footer class="site-footer">
-            <div class="footer-column">
-                <h4>Меню</h4>
-                <nav aria-label="Меню в футере">
-                    <ul>
+            <a class="site-footer__brand" href="index.html" aria-label="Интерьер — на главную">
+                <img src="img/Интерьер.-1.svg" alt="Интерьер." width="193" height="33">
+            </a>
+            <div class="site-footer__column">
+                <h2 class="site-footer__heading">Меню</h2>
+                <nav aria-label="Меню в подвале">
+                    <ul class="site-footer__list">
                         <li><a href="index.html">Главная</a></li>
                         <li><a href="catalog.html">Каталог</a></li>
-                        <li><a href="#">Корзина</a></li>
+                        <li><a href="#cart">Корзина</a></li>
                     </ul>
                 </nav>
             </div>
-
-            <div class="footer-column">
-                <h4>Контакты</h4>
-                <a href="tel:+79088008080">+7 908 800 80 80</a>
-                <a href="mailto:help@interier.com">help@interier.com</a>
-            </div>
-
-            <div class="footer-column social">
-                <h4>Соцсети</h4>
-                <div class="social-icons">
-                    <img src="img/vk.svg" alt="VK">
-                    <img src="img/telegram.svg" alt="Telegram">
-                    <img src="img/dzen.svg" alt="Dzen">
+            <div class="site-footer__column">
+                <h2 class="site-footer__heading">Контакты</h2>
+                <a class="site-footer__contact" href="tel:+79088008080">+7 908 800 80 80</a>
+                <a class="site-footer__contact" href="mailto:help@interier.com">help@interier.com</a>
+                <div class="site-footer__socials" aria-label="Социальные сети">
+                    <a href="#vk" aria-label="ВКонтакте"><img src="img/vk.svg" alt=""></a>
+                    <a href="#telegram" aria-label="Telegram"><img src="img/telegram.svg" alt=""></a>
+                    <a href="#dzen" aria-label="Дзен"><img src="img/dzen.svg" alt=""></a>
                 </div>
             </div>
-
-            <form class="subscribe-form">
-                <p>Получайте наши новости и обновления</p>
-                <div class="subscribe-row">
-                    <input type="email" placeholder="Ваш email">
-                    <button type="submit">Подписаться</button>
-                </div>
+            <form class="site-footer__subscribe" action="#">
+                <label class="site-footer__subscribe-label" for="subscribe-email">Получайте наши новости и обновления</label>
+                <input class="site-footer__subscribe-input" id="subscribe-email" name="email" type="email" placeholder="Ваш e-mail" required>
+                <button class="site-footer__subscribe-button" type="submit">Подписаться</button>
             </form>
         </footer>
     </div>
