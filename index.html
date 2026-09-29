@@ -15,7 +15,7 @@
     <div class="site-page">
         <main>
             <section class="hero" aria-labelledby="hero-title">
-                <header class="hero__header">
+                <header class="hero__header center">
                     <a class="hero__brand" href="index.html" aria-label="Интерьер — главная">
                         <img src="img/Интерьер..svg" alt="Интерьер." width="193" height="33">
                     </a>
@@ -31,14 +31,14 @@
                     </nav>
                 </header>
 
-                <div class="hero__content">
+                <div class="hero__content center">
                     <h1 class="hero__title" id="hero-title">Всё, чего<br> заслуживает ваш дом</h1>
                     <p class="hero__subtitle">Наша мебель — ваше отражение</p>
                     <a class="hero__catalog-link" href="catalog.html">Перейти в каталог</a>
                 </div>
             </section>
 
-            <div class="site-content">
+            <div class="site-content center">
                 <section class="categories" aria-labelledby="categories-title">
                     <h2 class="categories__title" id="categories-title">Мебель для ...</h2>
                     <div class="categories__grid">
@@ -164,34 +164,36 @@
         </main>
 
         <footer class="site-footer">
-            <a class="site-footer__brand" href="index.html" aria-label="Интерьер — на главную">
-                <img src="img/Интерьер.-1.svg" alt="Интерьер." width="193" height="33">
-            </a>
-            <div class="site-footer__column">
-                <h2 class="site-footer__heading">Меню</h2>
-                <nav aria-label="Меню в подвале">
-                    <ul class="site-footer__list">
-                        <li><a href="index.html">Главная</a></li>
-                        <li><a href="catalog.html">Каталог</a></li>
-                        <li><a href="#cart">Корзина</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="site-footer__column">
-                <h2 class="site-footer__heading">Контакты</h2>
-                <a class="site-footer__contact" href="tel:+79088008080">+7 908 800 80 80</a>
-                <a class="site-footer__contact" href="mailto:help@interier.com">help@interier.com</a>
-                <div class="site-footer__socials" aria-label="Социальные сети">
-                    <a href="#vk" aria-label="ВКонтакте"><img src="img/vk.svg" alt=""></a>
-                    <a href="#telegram" aria-label="Telegram"><img src="img/telegram.svg" alt=""></a>
-                    <a href="#dzen" aria-label="Дзен"><img src="img/dzen.svg" alt=""></a>
+            <div class="site-footer__inner center">
+                <a class="site-footer__brand" href="index.html" aria-label="Интерьер — на главную">
+                    <img src="img/Интерьер.-1.svg" alt="Интерьер." width="193" height="33">
+                </a>
+                <div class="site-footer__column">
+                    <h2 class="site-footer__heading">Меню</h2>
+                    <nav aria-label="Меню в подвале">
+                        <ul class="site-footer__list">
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="catalog.html">Каталог</a></li>
+                            <li><a href="#cart">Корзина</a></li>
+                        </ul>
+                    </nav>
                 </div>
+                <div class="site-footer__column">
+                    <h2 class="site-footer__heading">Контакты</h2>
+                    <a class="site-footer__contact" href="tel:+79088008080">+7 908 800 80 80</a>
+                    <a class="site-footer__contact" href="mailto:help@interier.com">help@interier.com</a>
+                    <div class="site-footer__socials" aria-label="Социальные сети">
+                        <a href="#vk" aria-label="ВКонтакте"><img src="img/vk.svg" alt=""></a>
+                        <a href="#telegram" aria-label="Telegram"><img src="img/telegram.svg" alt=""></a>
+                        <a href="#dzen" aria-label="Дзен"><img src="img/dzen.svg" alt=""></a>
+                    </div>
+                </div>
+                <form class="site-footer__subscribe" action="#">
+                    <label class="site-footer__subscribe-label" for="subscribe-email">Получайте наши новости и обновления</label>
+                    <input class="site-footer__subscribe-input" id="subscribe-email" name="email" type="email" placeholder="Ваш e-mail" required>
+                    <button class="site-footer__subscribe-button" type="submit">Подписаться</button>
+                </form>
             </div>
-            <form class="site-footer__subscribe" action="#">
-                <label class="site-footer__subscribe-label" for="subscribe-email">Получайте наши новости и обновления</label>
-                <input class="site-footer__subscribe-input" id="subscribe-email" name="email" type="email" placeholder="Ваш e-mail" required>
-                <button class="site-footer__subscribe-button" type="submit">Подписаться</button>
-            </form>
         </footer>
     </div>
 </body>
