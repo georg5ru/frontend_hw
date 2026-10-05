@@ -29,7 +29,8 @@ a {
 }
 
 .center {
-    width: min(1200px, calc(100% - 80px));
+    padding-right: calc(50% - 600px);
+    padding-left: calc(50% - 600px);
     margin-right: auto;
     margin-left: auto;
 }
@@ -564,7 +565,8 @@ input {
 }
 @media (max-width: 900px) {
     .center {
-        width: calc(100% - 56px);
+        padding-right: 28px;
+        padding-left: 28px;
     }
 
     .hero > .center {
@@ -601,7 +603,8 @@ input {
 
 @media (max-width: 600px) {
     .center {
-        width: calc(100% - 40px);
+        padding-right: 20px;
+        padding-left: 20px;
     }
 
     .hero > .center {
