@@ -29,8 +29,7 @@ a {
 }
 
 .center {
-    padding-right: calc(50% - 600px);
-    padding-left: calc(50% - 600px);
+    max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -317,6 +316,7 @@ input {
     align-items: flex-end;
     justify-content: space-between;
     gap: 40px;
+    width: 100%;
 }
 
 .site-footer__brand {
