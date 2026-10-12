@@ -1,0 +1,267 @@
+@import 'abstracts/variables';
+@import 'base/base';
+@import 'layout/header';
+@import 'pages/catalog';
+
+.site-content {
+  padding-top: 48px;
+  padding-bottom: 80px;
+}
+
+.categories__title,
+.product-section__title {
+  margin: 0 0 32px;
+  font-size: clamp(34px, 4vw, 48px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.categories__grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.category-card {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  min-height: 280px;
+  align-items: center;
+  justify-content: center;
+  background: #ddd;
+  color: $bg-white;
+
+  &::after {
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, .45));
+    content: '';
+    inset: 0;
+  }
+
+  &--large {
+    grid-column: span 3;
+    height: 416px;
+  }
+
+  &--small {
+    grid-column: span 2;
+    height: 330px;
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .35s ease;
+    inset: 0;
+  }
+
+  &:hover &__image {
+    transform: scale(1.035);
+  }
+
+  &__title {
+    position: relative;
+    z-index: 2;
+    align-self: center;
+    font-size: clamp(24px, 3vw, 34px);
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.site-content .product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 44px 30px;
+}
+
+.site-content .product-card {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.product-card {
+  &__image-link {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 14px;
+    background: #f5f4f2;
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 1 / .78;
+    object-fit: cover;
+    transition: transform .3s ease;
+  }
+
+  &__image-link:hover &__image {
+    transform: scale(1.025);
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  &__description {
+    min-height: 38px;
+    margin: 0 0 12px;
+    color: $text-soft;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  &__prices {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 18px;
+  }
+
+  &__price,
+  &__old-price {
+    font-size: 22px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  &__old-price {
+    color: $text-soft;
+    font-weight: 400;
+  }
+}
+
+.product-section {
+  margin-top: 80px;
+
+  &__catalog-link {
+    display: inline-block;
+    margin-top: 48px;
+    font-size: 16px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+.site-footer {
+  display: flex;
+  justify-content: center;
+  padding: 42px 0 56px;
+  background: $bg-soft;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__brand {
+    display: inline-block;
+    flex: 1 1 190px;
+    margin-top: 3px;
+    align-self: flex-start;
+
+    img {
+      width: 193px;
+      height: auto;
+    }
+  }
+
+  &__heading {
+    margin: 0 0 16px;
+    font-size: 23px;
+    font-weight: 500;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__list a,
+  &__contact {
+    color: $text-soft;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  &__contact {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 14px;
+    margin-top: 12px;
+
+    img {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__subscribe {
+    display: flex;
+    flex: 0 1 250px;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 250px;
+    margin-left: auto;
+    min-width: 0;
+    align-self: flex-start;
+  }
+
+  &__subscribe-label {
+    margin-bottom: 2px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  &__subscribe-input {
+    width: 100%;
+    min-width: 0;
+    min-height: 34px;
+    padding: 0 14px;
+    border: 1px solid #d0cecc;
+    border-radius: 18px;
+    background: $bg-white;
+    font-size: 12px;
+  }
+
+  &__subscribe-button {
+    width: 128px;
+    min-height: 36px;
+    margin-left: auto;
+    border: 0;
+    border-radius: 18px;
+    background: $button-soft;
+    color: #222;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color .2s ease;
+
+    &:hover {
+      background: #dedbdb;
+    }
+  }
+}
