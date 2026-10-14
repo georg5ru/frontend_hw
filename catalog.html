@@ -13,35 +13,106 @@
 </head>
 <body>
     <div class="site-page catalog-shell">
-        <header class="site-header catalog-header">
-            <a class="hero__brand" href="index.html" aria-label="Интерьер — главная">
-                <img src="img/Интерьер..svg" alt="Интерьер." width="193" height="33">
-            </a>
+        <header class="catalog-hero">
+            <div class="catalog-hero__inner center">
+                <div class="catalog-hero__top">
+                    <a class="hero__brand" href="index.html" aria-label="Интерьер — главная">
+                        <img src="img/Интерьер..svg" alt="Интерьер." width="193" height="33">
+                    </a>
 
-            <form class="hero__search catalog-search" role="search" action="#">
-                <label class="visually-hidden" for="catalog-search">Поиск по каталогу</label>
-                <input id="catalog-search" name="q" type="search" placeholder="Поиск">
-            </form>
+                    <form class="hero__search catalog-search" role="search" action="#">
+                        <label class="visually-hidden" for="catalog-search">Поиск по каталогу</label>
+                        <input id="catalog-search" name="q" type="search" placeholder="Поиск">
+                    </form>
 
-            <nav class="hero__navigation" aria-label="Навигация по каталогу">
-                <a class="hero__navigation-link" href="index.html">Главная</a>
-                <a class="hero__navigation-link" href="catalog.html">Каталог</a>
-                <a class="hero__navigation-link" href="#cart">Корзина</a>
-            </nav>
+                    <nav class="hero__navigation" aria-label="Навигация по каталогу">
+                        <a class="hero__navigation-link" href="index.html">Главная</a>
+                        <a class="hero__navigation-link" href="catalog.html">Каталог</a>
+                        <a class="hero__navigation-link" href="#cart">Корзина</a>
+                    </nav>
+                </div>
+
+                <h1 class="catalog-hero__title">Каталог</h1>
+            </div>
         </header>
 
         <main class="catalog-page center">
             <div class="catalog-page__top">
-                <h1 class="catalog-page__title">Каталог</h1>
-                <label class="catalog-page__sort" for="catalog-sort">
-                    <span>Порядок:</span>
-                    <select id="catalog-sort" name="sort">
-                        <option>сперва новые</option>
-                        <option>сначала дешевые</option>
-                        <option>сначала дорогие</option>
-                    </select>
-                </label>
+                <div class="catalog-page__crumbs">Главная / Каталог товаров</div>
+                <div class="catalog-page__controls">
+                    <div class="catalog-filter-toggle-wrap">
+                        <button class="catalog-filter-toggle" type="button" aria-expanded="false">Фильтрация</button>
+                    </div>
+                    <label class="catalog-page__sort" for="catalog-sort">
+                        <span>По популярности</span>
+                        <select id="catalog-sort" name="sort">
+                            <option>сперва новые</option>
+                            <option>сначала дешевые</option>
+                            <option>сначала дорогие</option>
+                        </select>
+                    </label>
+                </div>
             </div>
+
+            <form class="catalog-filter" action="#" method="get">
+                <fieldset class="catalog-filter__group">
+                    <legend>Сроки доставки</legend>
+                    <div class="catalog-filter__choices">
+                        <label><input type="radio" name="delivery" value="any" checked> неважно</label>
+                        <label><input type="radio" name="delivery" value="today"> сегодня</label>
+                        <label><input type="radio" name="delivery" value="tomorrow"> завтра</label>
+                        <label><input type="radio" name="delivery" value="3days"> до трех дней</label>
+                        <label><input type="radio" name="delivery" value="7days"> до семи дней</label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="catalog-filter__group">
+                    <legend>Диапазон цен</legend>
+                    <div class="catalog-filter__range" style="--from: 25%; --to: 75%;">
+                        <input type="range" min="0" max="200000" step="1000" value="50000" aria-label="Минимальная цена" style="--value: 25%;">
+                        <input type="range" min="0" max="200000" step="1000" value="150000" aria-label="Максимальная цена" style="--value: 75%;">
+                    </div>
+                    <div class="catalog-filter__range-values">
+                        <span>от 50 000 ₽</span>
+                        <span>до 150 000 ₽</span>
+                    </div>
+                </fieldset>
+
+                <fieldset class="catalog-filter__group">
+                    <legend>Цвет</legend>
+                    <div class="catalog-filter__choices catalog-filter__choices--checkbox">
+                        <label class="catalog-filter__color-option" aria-label="Белый цвет"><input type="checkbox" name="color" value="white"><span class="catalog-filter__swatch catalog-filter__swatch--white"></span></label>
+                        <label class="catalog-filter__color-option" aria-label="Черный цвет"><input type="checkbox" name="color" value="black"><span class="catalog-filter__swatch catalog-filter__swatch--black"></span></label>
+                        <label class="catalog-filter__color-option" aria-label="Серый цвет"><input type="checkbox" name="color" value="gray"><span class="catalog-filter__swatch catalog-filter__swatch--gray"></span></label>
+                        <label class="catalog-filter__color-option" aria-label="Красный цвет"><input type="checkbox" name="color" value="red"><span class="catalog-filter__swatch catalog-filter__swatch--red"></span></label>
+                        <label class="catalog-filter__color-option" aria-label="Оранжевый цвет"><input type="checkbox" name="color" value="orange"><span class="catalog-filter__swatch catalog-filter__swatch--orange"></span></label>
+                        <label class="catalog-filter__color-option" aria-label="Желтый цвет"><input type="checkbox" name="color" value="yellow"><span class="catalog-filter__swatch catalog-filter__swatch--yellow"></span></label>
+                        <label class="catalog-filter__color-option" aria-label="Зеленый цвет"><input type="checkbox" name="color" value="green"><span class="catalog-filter__swatch catalog-filter__swatch--green"></span></label>
+                        <label class="catalog-filter__color-option" aria-label="Голубой цвет"><input type="checkbox" name="color" value="blue"><span class="catalog-filter__swatch catalog-filter__swatch--blue"></span></label>
+                        <label class="catalog-filter__color-option" aria-label="Синий цвет"><input type="checkbox" name="color" value="navy"><span class="catalog-filter__swatch catalog-filter__swatch--navy"></span></label>
+                        <label class="catalog-filter__color-option" aria-label="Фиолетовый цвет"><input type="checkbox" name="color" value="violet"><span class="catalog-filter__swatch catalog-filter__swatch--violet"></span></label>
+                        <label class="catalog-filter__color-option" aria-label="Розовый цвет"><input type="checkbox" name="color" value="pink"><span class="catalog-filter__swatch catalog-filter__swatch--pink"></span></label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="catalog-filter__group">
+                    <legend>Тип комнаты</legend>
+                    <div class="catalog-filter__choices catalog-filter__choices--checkbox">
+                        <label><input type="checkbox" name="room" value="kitchen"> кухня и столовая</label>
+                        <label><input type="checkbox" name="room" value="bathroom"> ванная комната</label>
+                        <label><input type="checkbox" name="room" value="kids"> детская комната</label>
+                        <label><input type="checkbox" name="room" value="office"> домашний офис</label>
+                        <label><input type="checkbox" name="room" value="living"> гостиная</label>
+                        <label><input type="checkbox" name="room" value="hall"> прихожая</label>
+                        <label><input type="checkbox" name="room" value="bedroom"> спальня</label>
+                        <label><input type="checkbox" name="room" value="wardrobe"> гардероб</label>
+                        <label><input type="checkbox" name="room" value="garden"> дача</label>
+                        <label><input type="checkbox" name="room" value="lighting"> освещение</label>
+                    </div>
+                </fieldset>
+
+                <button class="catalog-filter__submit" type="submit">Применить фильтры</button>
+            </form>
 
             <section class="product-grid product-grid--catalog" aria-label="Каталог товаров">
                 <article class="product-card">
