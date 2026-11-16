@@ -1,0 +1,11 @@
+{
+  "name": "site",
+  "private": true,
+  "scripts": {
+    "build:css": "sass scss/main.scss style.css --style=expanded",
+    "watch:css": "sass --watch scss/main.scss style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.77.8"
+  }
+}
