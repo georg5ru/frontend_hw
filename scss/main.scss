@@ -160,20 +160,19 @@
   background: $bg-soft;
 
   &__inner {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 193px 140px 180px 250px;
     align-items: flex-start;
-    justify-content: space-between;
-    gap: 40px;
+    justify-content: start;
+    gap: 60px;
     width: 100%;
-    max-width: 1600px;
+    max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
   }
 
   &__brand {
     display: inline-block;
-    flex: 1 1 190px;
     margin-top: 3px;
     align-self: flex-start;
 
@@ -223,11 +222,10 @@
 
   &__subscribe {
     display: flex;
-    flex: 0 1 250px;
     flex-direction: column;
     gap: 8px;
     max-width: 250px;
-    margin-left: auto;
+    margin-left: 0;
     min-width: 0;
     align-self: flex-start;
   }
@@ -250,7 +248,7 @@
   }
 
   &__subscribe-button {
-    width: 128px;
+    width: 100%;
     min-height: 36px;
     margin-left: auto;
     border: 0;
@@ -294,15 +292,14 @@
 
   .site-footer__inner {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 32px 24px;
+    grid-template-columns: 140px 100px 100px 220px;
+    gap: 24px 20px;
   }
 
   .site-footer__subscribe {
-    grid-column: 1 / -1;
-    width: min(100%, 420px);
-    max-width: none;
-    margin-left: 0;
+    grid-column: 4;
+    width: 100%;
+    max-width: 220px;
   }
 }
 
