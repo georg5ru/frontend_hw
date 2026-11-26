@@ -134,6 +134,7 @@
 }
 
 .catalog-filter {
+  position: relative;
   z-index: 5;
 
   &__toggle {
@@ -146,7 +147,7 @@
     background: $bg-white;
     color: $text-dark;
     font: inherit;
-    cursor: default;
+    cursor: pointer;
 
     &::after {
       position: absolute;
@@ -364,6 +365,18 @@
     font: inherit;
     cursor: pointer;
   }
+}
+
+.catalog-filter__panel[hidden],
+.catalog-page__empty[hidden],
+.catalog-page .product-card[hidden] {
+  display: none;
+}
+
+.catalog-page__empty {
+  margin: 32px 0;
+  color: $text-muted;
+  text-align: center;
 }
 
 @media (max-width: 1024px) {

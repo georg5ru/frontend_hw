@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="site.js" defer></script>
 </head>
 <body>
     <div class="site-page catalog-shell">
@@ -40,8 +41,8 @@
                 <div class="catalog-page__crumbs">Главная / Каталог товаров</div>
                 <div class="catalog-page__controls">
                     <div class="catalog-filter">
-                        <button class="catalog-filter__toggle" type="button" aria-expanded="true" aria-controls="catalog-filter-panel">Фильтрация</button>
-                        <form class="catalog-filter__panel" id="catalog-filter-panel" action="#" method="get">
+                        <button class="catalog-filter__toggle" type="button" aria-expanded="false" aria-controls="catalog-filter-panel">Фильтрация</button>
+                        <form class="catalog-filter__panel" id="catalog-filter-panel" action="#" method="get" hidden>
                             <fieldset class="catalog-filter__group catalog-filter__group--delivery">
                                 <legend>Сроки доставки</legend>
                                 <div class="catalog-filter__choices">
@@ -56,12 +57,12 @@
                             <fieldset class="catalog-filter__group catalog-filter__group--price">
                                 <legend>Цена</legend>
                                 <div class="catalog-filter__range" style="--from: 0%; --to: 100%;">
-                                    <input type="range" min="0" max="100000" step="1000" value="0" aria-label="Минимальная цена">
-                                    <input type="range" min="0" max="100000" step="1000" value="100000" aria-label="Максимальная цена">
+                                    <input id="catalog-price-min" type="range" min="0" max="120000" step="1000" value="0" aria-label="Минимальная цена">
+                                    <input id="catalog-price-max" type="range" min="0" max="120000" step="1000" value="120000" aria-label="Максимальная цена">
                                 </div>
                                 <div class="catalog-filter__range-values">
-                                    <span>от 0 руб.</span>
-                                    <span>до 100000 руб.</span>
+                                    <span>от <output for="catalog-price-min">0</output> руб.</span>
+                                    <span>до <output for="catalog-price-max">120 000</output> руб.</span>
                                 </div>
                             </fieldset>
 
@@ -107,18 +108,18 @@
                         </form>
                     </div>
                     <label class="catalog-page__sort" for="catalog-sort">
-                        <span>По популярности</span>
+                        <span class="visually-hidden">Сортировка товаров</span>
                         <select id="catalog-sort" name="sort">
-                            <option>сперва новые</option>
-                            <option>сначала дешевые</option>
-                            <option>сначала дорогие</option>
+                            <option value="popular">По популярности</option>
+                            <option value="price-asc">Сначала дешевле</option>
+                            <option value="price-desc">Сначала дороже</option>
                         </select>
                     </label>
                 </div>
             </div>
 
             <section class="product-grid product-grid--catalog" aria-label="Каталог товаров">
-                <article class="product-card">
+                <article class="product-card" data-price="120000" data-rooms="bedroom" data-colors="gray white" data-delivery="7days">
                     <a class="product-card__image-link" href="catalog.html">
                         <img class="product-card__image" src="img/Rectangle 22-1.jpg" alt="Кровать TATRAN">
                     </a>
@@ -127,7 +128,7 @@
                     <div class="product-card__prices"><span class="product-card__price">120 000 руб.</span></div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card" data-price="21000" data-rooms="living" data-colors="yellow" data-delivery="3days">
                     <a class="product-card__image-link" href="catalog.html">
                         <img class="product-card__image" src="img/Rectangle 23-1.jpg" alt="Кресло VILORA">
                     </a>
@@ -136,7 +137,7 @@
                     <div class="product-card__prices"><span class="product-card__price">21 000 руб.</span></div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card" data-price="34000" data-rooms="kitchen" data-colors="orange white" data-delivery="tomorrow">
                     <a class="product-card__image-link" href="catalog.html">
                         <img class="product-card__image" src="img/Rectangle 24-1.jpg" alt="Стол MENU">
                     </a>
@@ -145,7 +146,7 @@
                     <div class="product-card__prices"><span class="product-card__price">34 000 руб.</span></div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card" data-price="68000" data-rooms="living" data-colors="blue" data-delivery="today">
                     <a class="product-card__image-link" href="catalog.html">
                         <img class="product-card__image" src="img/Rectangle 22-2.jpg" alt="Кресло ASKESTA">
                     </a>
@@ -154,7 +155,7 @@
                     <div class="product-card__prices"><span class="product-card__price">68 000 руб.</span></div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card" data-price="40000" data-rooms="garden" data-colors="orange white" data-delivery="7days">
                     <a class="product-card__image-link" href="catalog.html">
                         <img class="product-card__image" src="img/Rectangle 23-2.jpg" alt="Стол NORMAN">
                     </a>
@@ -163,7 +164,7 @@
                     <div class="product-card__prices"><span class="product-card__price">40 000 руб.</span></div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card" data-price="80000" data-rooms="living" data-colors="gray white" data-delivery="3days">
                     <a class="product-card__image-link" href="catalog.html">
                         <img class="product-card__image" src="img/Rectangle 24-2.jpg" alt="Диван NASTAN">
                     </a>
@@ -172,6 +173,7 @@
                     <div class="product-card__prices"><span class="product-card__price">80 000 руб.</span></div>
                 </article>
             </section>
+            <p class="catalog-page__empty" aria-live="polite" hidden>Товары не найдены. Измените параметры фильтра.</p>
         </main>
 
         <footer class="site-footer">
@@ -194,9 +196,9 @@
                     <a class="site-footer__contact" href="tel:+79088008080">+7 908 800 80 80</a>
                     <a class="site-footer__contact" href="mailto:help@interier.com">help@interier.com</a>
                     <div class="site-footer__socials" aria-label="Социальные сети">
-                        <a href="#vk" aria-label="ВКонтакте"><img src="img/vk.svg" alt=""></a>
-                        <a href="#telegram" aria-label="Telegram"><img src="img/telegram.svg" alt=""></a>
-                        <a href="#dzen" aria-label="Дзен"><img src="img/dzen.svg" alt=""></a>
+                        <a href="https://vk.com/" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"><img src="img/vk.svg" alt=""></a>
+                        <a href="https://t.me/" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><img src="img/telegram.svg" alt=""></a>
+                        <a href="https://dzen.ru/" target="_blank" rel="noopener noreferrer" aria-label="Дзен"><img src="img/dzen.svg" alt=""></a>
                     </div>
                 </div>
                 <form class="site-footer__subscribe" action="#">
